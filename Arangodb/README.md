@@ -1,4 +1,4 @@
-Using a data container 
+# Using a data container 
 Alternatively you can create a container holding the data.
 
 unix> docker create --name arangodb-persist arangodb true
@@ -10,7 +10,7 @@ If want to save a few bytes you can alternatively use busybox or alpine for crea
 unix> docker run -d --name arangodb-persist -v /var/lib/arangodb3 busybox true
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Choosing an authentication method 
+# Choosing an authentication method 
 The ArangoDB image provides several authentication methods which can be specified via environment variables (-e) when using docker run
 
 ARANGO_RANDOM_ROOT_PASSWORD=1
@@ -28,7 +28,7 @@ ARANGO_ROOT_PASSWORD=somepassword
 Specify your own root password.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------
-Limiting resource utilization 
+# Limiting resource utilization 
 arangod checks the following environment variables, which can be used to restrict how much memory and how many CPU cores it should use:
 
 ARANGODB_OVERRIDE_DETECTED_TOTAL_MEMORY (introduced in v3.6.3)
